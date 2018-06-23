@@ -19,11 +19,11 @@ Auth::routes();
 
 Route::get('/', 'PostController@index')->name('home');
 
-Route::resource('users', 'UserController');
+Route::resource('security/users', 'Security\UserController');
 
-Route::resource('roles', 'RoleController');
+Route::resource('security/roles', 'security\RoleController');
 
-Route::resource('permissions', 'PermissionController');
+Route::resource('security/permissions', 'security\PermissionController');
 
 Route::resource('posts', 'PostController');
 

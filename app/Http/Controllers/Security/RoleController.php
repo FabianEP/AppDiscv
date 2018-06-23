@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Security;
 
 use Illuminate\Http\Request;
 
@@ -8,6 +8,8 @@ use Auth;
 //Importing laravel-permission models
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+
+use App\Http\Controllers\Controller;
 
 use Session;
 
@@ -26,7 +28,7 @@ class RoleController extends Controller
     {
         $roles = Role::all();//Get all roles
 
-        return view('roles.index')->with('roles', $roles);
+        return view('security.roles.index')->with('roles', $roles);
     }
 
     /**
@@ -38,7 +40,7 @@ class RoleController extends Controller
     {
         $permissions = Permission::all();//Get all permissions
 
-        return view('roles.create', ['permissions'=>$permissions]);
+        return view('security.roles.create', ['permissions'=>$permissions]);
     }
 
     /**
@@ -99,7 +101,7 @@ class RoleController extends Controller
         $role = Role::findOrFail($id);
         $permissions = Permission::all();
 
-        return view('roles.edit', compact('role', 'permissions'));
+        return view('security.roles.edit', compact('role', 'permissions'));
     }
 
     /**
