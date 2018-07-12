@@ -4,6 +4,57 @@
 @section('maincontent')
 
 @if (Auth::guest())
+    <section id="wrapper-custom">
+        <div class="hero">
+            <div class="darker">
+                <nav class="navbar navbar-expand-lg">
+                    <span class="menu-bars navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></span>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#trending">Lo más vendido</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Ofertas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="new">
+                        <h1>Aprovecha las rebajas</h1>
+                        <button class="btn btn-prim">Ver más</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container" id="trending">
+                <h1>Lo más vendido</h1>
+                <div class="row">
+                    <div class="products col-sm-6 col-md-3">
+                        <img src="https://picsum.photos/200/200/?image=119">
+                        <h2>Nombre</h2>
+                    </div>
+                    <div class="products col-sm-6 col-md-3">
+                        <img src="https://picsum.photos/200/200/?image=133">
+                        <h2>Nombre</h2>
+                    </div>
+                    <div class="products col-sm-6 col-md-3">
+                        <img src="https://picsum.photos/200/200/?image=1">
+                        <h2>Nombre</h2>
+                    </div>
+                    <div class="products col-sm-6 col-md-3">
+                        <img src="https://picsum.photos/200/200/?image=2">
+                        <h2>Nombre</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     @yield('content')
 @else
     <div id="wrapper">
